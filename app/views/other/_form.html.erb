@@ -1,0 +1,13 @@
+<%= form_with scope: :message, url: post_something_path do |form| %>
+  <p>
+    <span>Name: &nbsp;</span>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <span>Message: &nbsp;</span>
+    <%= form.text_area :message, rows: 3 %>
+  </p>
+  <p>
+    <%= form.submit 'Post something' %>
+  </p>
+<% end %>

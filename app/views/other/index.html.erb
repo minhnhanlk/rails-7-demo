@@ -1,12 +1,18 @@
+<%= turbo_stream_from 'message-channel' %>
+
 <h1>This is another page</h1>
 <div><%= link_to "go to home page", root_path %></div>
 
-<div style="margin-top: 3rem;">
-  <%= form_with scope: :any, url: post_something_path do |form| %>
-      <%= form.submit 'Post something' %>
+<div style="margin-top: 3rem; width: 500px; margin-right: auto; margin-left: auto;">
+  <%= turbo_frame_tag 'form' do %>
+    <%= render 'form' %>
   <% end %>
 
-  <turbo-frame id="messages">
-    <div>An empty message</div>
-  </turbo-frame>
+  <h3>Messages:</h3>
+  <% Message.all.each do |message| %>
+    <%= render 'message', message: message %>
+  <% end %>
+
+  <%= turbo_frame_tag 'messages' do %>
+  <% end %>
 </div>
