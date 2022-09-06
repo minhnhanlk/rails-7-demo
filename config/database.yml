@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: postgres
+  password: 5ab2545f24453bfeb3ea1540558f8d6b12e2446d7f2470f2
+  host: rails-7-demo-db.internal
+
