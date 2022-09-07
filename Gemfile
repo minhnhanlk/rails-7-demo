@@ -72,3 +72,5 @@ group :test do
 end
 
 gem 'slim-rails', '~> 3.5', '>= 3.5.1'
+
+gem "pg", "~> 1.4"
