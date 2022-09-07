@@ -15,4 +15,4 @@
 
 <hr>
 
-<%= Rails.configuration.database_configuration[Rails.env] %>
+<%= ActiveRecord::Base.connection_db_config %>
