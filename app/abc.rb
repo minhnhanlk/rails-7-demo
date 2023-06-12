@@ -6,4 +6,8 @@ class Abc
     def ggg
 
     end
+    
+    def efg 
+
+    end
 end
