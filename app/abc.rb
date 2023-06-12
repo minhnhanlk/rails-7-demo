@@ -1,5 +1,5 @@
 class Abc
-    def cde1
+    def cde
 
     end
 end
